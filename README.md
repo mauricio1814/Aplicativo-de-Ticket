@@ -1,13 +1,17 @@
 # Mesa de ayuda IT
 
-Aplicación web de tickets con servidor en Python y base de datos SQLite. No necesita instalar librerías externas.
+Aplicación web de tickets con servidor en Python y base de datos SQLite. No necesita instalar librerías externas. **No abras `index.html` directamente**: sin el servidor los botones no pueden iniciar sesión ni guardar los tickets.
 
 ## Requisitos
 
 - Python 3.10 o superior.
 - Para abrirla desde otros dispositivos, todos deben estar en la misma red local.
 
-## Iniciar en Windows (PowerShell)
+## Iniciar en Windows
+
+Haz doble clic en `iniciar.bat`. Se abrirá una ventana del servidor y el navegador en `http://localhost:8000`. Deja abierta la ventana del servidor mientras usas la aplicación; para detenerlo, pulsa `Ctrl+C` en esa ventana.
+
+También puedes iniciarlo desde PowerShell:
 
 Abre PowerShell en esta carpeta y ejecuta:
 
