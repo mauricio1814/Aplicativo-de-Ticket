@@ -9,7 +9,7 @@ Aplicación web de tickets con servidor en Python y base de datos SQLite. No nec
 
 ## Iniciar en Windows
 
-Haz doble clic en `iniciar.bat`. Se abrirá una ventana del servidor y el navegador en `http://localhost:8000`. Deja abierta la ventana del servidor mientras usas la aplicación; para detenerlo, pulsa `Ctrl+C` en esa ventana.
+Haz doble clic en `iniciar.bat`. Se abrirá una ventana del servidor y el navegador en `http://localhost:5100`. Deja abierta la ventana del servidor mientras usas la aplicación; para detenerlo, pulsa `Ctrl+C` en esa ventana.
 
 También puedes iniciarlo desde PowerShell:
 
@@ -19,13 +19,13 @@ Abre PowerShell en esta carpeta y ejecuta:
 python server.py
 ```
 
-Si `python` no funciona, intenta `py server.py`. En el mismo equipo abre `http://localhost:8000`.
+Si `python` no funciona, intenta `py server.py`. En el mismo equipo abre `http://localhost:5100`.
 
 ## Acceso por dirección IP (red local)
 
-El servidor escucha en `0.0.0.0:8000`. Averigua la IPv4 del computador con `ipconfig` y desde otro dispositivo conectado a la misma red abre `http://IP_DEL_COMPUTADOR:8000`, por ejemplo `http://192.168.1.25:8000`.
+El servidor escucha en `0.0.0.0:5100`. Averigua la IPv4 del computador con `ipconfig` y desde otro dispositivo conectado a la misma red abre `http://IP_DEL_COMPUTADOR:5100`. Para esta configuración se espera `http://20.20.0.88:5100/` si esa IP está asignada al computador que ejecuta el servidor. Si no corresponde a este computador, el administrador de red debe desplegar la aplicación en el equipo que tenga esa IP.
 
-Si Windows Firewall pregunta, permite Python en redes privadas. Si no pregunta y otro dispositivo no conecta, crea una regla de entrada para TCP puerto 8000 en el perfil Privado. No publiques este servidor en Internet.
+Si Windows Firewall pregunta, permite Python en redes privadas. Si no pregunta y otro dispositivo no conecta, crea una regla de entrada para TCP puerto 5100 en el perfil Privado. No publiques este servidor en Internet.
 
 ## Iniciar desde WSL
 
@@ -37,7 +37,7 @@ cd "/mnt/c/Users/alvar/Documents/Trabajos U/Noveno Semestre/Telematica/Proyecto 
 python3 server.py
 ```
 
-En el mismo Windows abre `http://localhost:8000`. Para acceso desde otro dispositivo, usa la IPv4 de Windows obtenida con `ipconfig` y permite el puerto TCP 8000 en Windows Firewall. La disponibilidad de la IP de WSL desde la red puede variar por la configuración de WSL; para una presentación en la red local, es más sencillo ejecutar `python server.py` directamente en Windows.
+En el mismo Windows abre `http://localhost:5100`. Para acceso desde otro dispositivo, usa la IPv4 de Windows obtenida con `ipconfig` y permite el puerto TCP 5100 en Windows Firewall para la red privada si el firewall lo bloquea. La disponibilidad de la IP de WSL desde la red puede variar por la configuración de WSL; para una presentación en la red local, es más sencillo ejecutar `python server.py` directamente en Windows.
 
 ## Cuentas de demostración
 
@@ -49,3 +49,4 @@ La base de datos se crea automáticamente en `data/mesa_ayuda.db`. Conserva tick
 ## Alcance del proyecto académico
 
 El servidor es para desarrollo y demostración en una red controlada. Las sesiones se guardan en memoria, por lo que se cierran al reiniciar Python. Para un sistema real se requiere HTTPS, gestión segura de usuarios, copias de seguridad y despliegue endurecido. No uses datos personales reales ni expongas el puerto directamente a Internet.
+

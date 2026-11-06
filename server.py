@@ -6,7 +6,7 @@ import sqlite3, json, hashlib, hmac, secrets, os, mimetypes
 ROOT = Path(__file__).resolve().parent
 DB_PATH = ROOT / 'data' / 'mesa_ayuda.db'
 HOST = os.environ.get('HOST', '0.0.0.0')
-PORT = int(os.environ.get('PORT', '8000'))
+PORT = int(os.environ.get('PORT', '5100'))
 SESSIONS = {}
 
 

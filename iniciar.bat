@@ -7,4 +7,4 @@ if %errorlevel%==0 (
   start "Mesa de ayuda - servidor" cmd /k python server.py
 )
 timeout /t 2 /nobreak >nul
-start "" "http://localhost:8000"
+start "" "http://localhost:5100"
